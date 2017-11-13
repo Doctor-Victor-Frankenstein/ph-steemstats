@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel">
+        <div class="panel-body">
+          <h1>Welcome to Philippines Steemit Stats</h1>
+          <p>What is Philippine Steemit Stats? Philippines Steemit Stats is a web app that displays the data of Steemit Users from the Philippines. The data comes from STEEMSQL created by @arcange</p>
+          <h1>Total Users: {{size}}</h1>
+          <p>The total users are based on the users who have the word Philippines in their profile information on Steemit</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="panel" style="padding: 20px;">
+         <table id="myTable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Location</th>
+                    <th>Created</th>
+                    <th>Last Upvote Time</th>
+                </tr>
+            </thead>
+            <tbody>
+              {{#each data}}
+              <tr>
+                 <th><a href="https://steemit.com/@{{this.name}}" target="_blank">{{this.name}}</a></th>
+                 <td>{{this.location_string}}</td>
+                 <td>{{this.created}}</td>
+                 <td>{{this.last_vote_time}}</td>
+              </tr>
+              {{/each}}
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
