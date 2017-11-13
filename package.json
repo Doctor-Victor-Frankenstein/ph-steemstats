@@ -1,9 +1,9 @@
 {
-  "name": "blue-fire",
+  "name": "ph-steemstats",
   "version": "1.0.0",
-  "description": "My app description",
+  "description": "Philippine Steemit Stats",
   "scripts": {
-    "deploy": "npm test && git push heroku master",
+    "deploy": "",
     "start": "node server.js"
   },
   "dependencies": {
