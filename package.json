@@ -17,7 +17,8 @@
     "express-validator": "^2.20.4",
     "method-override": "^2.3.5",
     "morgan": "^1.7.0",
-    "nodemailer": "^2.3.0"
+    "nodemailer": "^2.3.0",
+    "seriate": "^0.13.0"
   },
   "devDependencies": {},
   "engines": {
