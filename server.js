@@ -15,6 +15,9 @@ dotenv.load();
 
 // Controllers
 var HomeController = require('./controllers/home');
+var ActiveController = require('./controllers/active');
+var InactiveController = require('./controllers/inactive');
+
 
 var app = express();
 
@@ -48,6 +51,8 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', HomeController.index);
+app.get('/active', ActiveController.active);
+app.get('/inactive', InactiveController.inactive);
 
 // Production error handler
 if (app.get('env') === 'production') {
