@@ -9,15 +9,38 @@
 <link rel="stylesheet" href="/css/vendor/bootstrap.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="/css/effect1.css" />
+<script src="/js/modernizr.custom.js"></script>
 </head>
-<body>
-{{> header}}
-{{{body}}}
-{{> footer}}
+<body class="demo-1">
+<div id="ip-container" class="ip-container">
+	<!-- initial header -->
+	<header class="ip-header">
+		<h1 class="ip-logo">
+			<img src="/images/logo.png" alt="PH Steem Stats">
+		</h1>
+		<div class="ip-loader">
+			<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+				<path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+				<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+			</svg>
+		</div>
+	</header>
+	<!-- top bar -->
+	<!-- main content -->
+	<div class="ip-main">
+		{{> header}}
+		{{{body}}}
+		{{> footer}}
+	</div>
+</div><!-- /container -->
+
 
 <script src="/js/lib/jquery.js"></script>
 <script src="/js/lib/bootstrap.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="/js/classie.js"></script>
+<script src="/js/pathLoader.js"></script>
 <script src="/js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
