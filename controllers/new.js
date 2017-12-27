@@ -23,7 +23,7 @@ exports.newusers = function(req, res) {
 	    	var objectsize = Object.keys(results).length;
 	    	var queryName = "New"
 	    	var content = "Total Number of New Users in the Last 30 Days";
-	    	res.render('inner', {data:results, error:null, size: objectsize, queryname: queryName, content: content, title: queryname});
+	    	res.render('inner', {data:results, error:null, size: objectsize, queryname: queryName, content: content, title: queryName});
 	    }, function( err ) {
 	        res.render('deadlock', {error: err});
     } );
