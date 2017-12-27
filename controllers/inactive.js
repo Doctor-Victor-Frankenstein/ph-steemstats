@@ -23,7 +23,7 @@ exports.inactive = function(req, res) {
 	    	var objectsize = Object.keys(results).length;
 	    	var queryname = "Inactive";
 	    	var content = "Total Number of Inactive Users who has not been active in the last 30 days, using the parameter Last Upvote Time";
-	    	res.render('inner', {data:results, error:null, size: objectsize, queryname: queryname, content: content});
+	    	res.render('inner', {data:results, error:null, size: objectsize, queryname: queryname, content: content, title: queryname});
 	    }, function( err ) {
 	        res.render('deadlock', {error: err});
     } );

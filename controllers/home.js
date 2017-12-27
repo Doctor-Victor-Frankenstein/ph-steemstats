@@ -18,7 +18,7 @@ exports.index = function(req, res) {
 	        query: sql.fromFile( "../queries/getAllUsers.sql" )
 	    } ).then( function( results ) {
 	    	var objectsize = Object.keys(results).length;
-	    	res.render('home', {data:results, error:null, size: objectsize});
+	    	res.render('home', {data:results, error:null, size: objectsize, title: 'Home'});
 	    }, function( err ) {
 	    	console.log(err);
 	        res.render('deadlock', {error: err});

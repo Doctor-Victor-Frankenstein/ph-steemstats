@@ -23,7 +23,7 @@ exports.active = function(req, res) {
 	    	var objectsize = Object.keys(results).length;
 	    	var queryname = "Active";
 	    	var content = "Total Number of Users Active in the last 30 days, using Last Upvote Time as basis";
-	    	res.render('inner', {data:results, error:null, size: objectsize, queryname: queryname, content: content});
+	    	res.render('inner', {data:results, error:null, size: objectsize, queryname: queryname, content: content, title: queryname});
 	    }, function( err ) {
 	        res.render('deadlock', {error: err});
     } );
