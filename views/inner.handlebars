@@ -1,37 +1,27 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel">
-        <div class="panel-body">
-          <h1>{{queryname}} Users</h1>
-          <h1>Total Users: {{size}}</h1>
-          <p>{{content}}</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-12">
-      <div class="panel" style="padding: 20px;">
-         <table id="myTable" class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>User Name</th>
-                    <th>Location</th>
-                    <th>Created</th>
-                    <th>Last Upvote Time</th>
-                </tr>
-            </thead>
-            <tbody>
-              {{#each data}}
-              <tr>
-                 <th><a href="https://steemit.com/@{{this.name}}" target="_blank">{{this.name}}</a></th>
-                 <td>{{this.location_string}}</td>
-                 <td>{{this.created}}</td>
-                 <td>{{this.last_vote_time}}</td>
-              </tr>
-              {{/each}}
-            </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+<div class="usersbox">
+    <h1>Total {{queryname}} Users from the Philippines</h1>
+    <h2 class="count">{{size}}</h2>
+    <p>{{content}}</p>
+</div>
+<div class="data-table">
+  <table id="myTable" class="table table-bordered table-striped">
+      <thead>
+          <tr>
+              <th>User Name</th>
+              <th>Location</th>
+              <th>Created</th>
+              <th>Last Upvote Time</th>
+          </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+           <td><a href="https://steemit.com/@{{this.name}}" target="_blank">{{this.name}}</a></td>
+           <td>{{this.location_string}}</td>
+           <td>{{this.created}}</td>
+           <td>{{this.last_vote_time}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+  </table>
 </div>

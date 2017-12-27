@@ -20,6 +20,7 @@ exports.index = function(req, res) {
 	    	var objectsize = Object.keys(results).length;
 	    	res.render('home', {data:results, error:null, size: objectsize});
 	    }, function( err ) {
+	    	console.log(err);
 	        res.render('deadlock', {error: err});
     });
 };

@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $('#myTable').DataTable();
+});
+
 /**
  * main.js
  * http://www.codrops.com
@@ -17,11 +21,13 @@
 		animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
 		// animation end event name
 		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
+		logo = $('.ip-logo');
 
 	function init() {
 		var onEndInitialAnimation = function() {
 			if( support.animations ) {
 				this.removeEventListener( animEndEventName, onEndInitialAnimation );
+
 			}
 
 			startLoading();
@@ -54,6 +60,7 @@
 					if( progress === 1 ) {
 						classie.remove( container, 'loading' );
 						classie.add( container, 'loaded' );
+
 						clearInterval( interval );
 
 						var onEndHeaderAnimation = function(ev) {
@@ -72,6 +79,8 @@
 						else {
 							onEndHeaderAnimation();
 						}
+						// $(header).fadeOut('fast');
+						logo.fadeOut('slow');
 					}
 				}, 80 );
 		};
@@ -86,7 +95,3 @@
 	init();
 
 })();
-
-$(document).ready(function(){
-    $('#myTable').DataTable();
-});

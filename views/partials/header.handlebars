@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+{{!-- <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" data-toggle="collapse" data-target="#navbar" class="navbar-toggle collapsed">
@@ -18,4 +18,11 @@
       </ul>
     </div>
   </div>
+</nav> --}}
+<nav class="codrops-demos">
+  <a {{#ifeq title 'Home'}}class="current-demo"{{/ifeq}} href="/">Home</a>
+  <a {{#ifeq title 'About'}}class="current-demo"{{/ifeq}} href="/about">About</a>
+  <a {{#ifeq title 'New'}}class="current-demo"{{/ifeq}} href="/new">New Users</a>
+  <a {{#ifeq title 'Active'}}class="current-demo"{{/ifeq}} href="/active">Active Users</a>
+  <a {{#ifeq title 'Inactive'}}class="current-demo"{{/ifeq}} href="/inactive">Inactive Users</a>
 </nav>

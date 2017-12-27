@@ -18,6 +18,7 @@ var HomeController = require('./controllers/home');
 var ActiveController = require('./controllers/active');
 var InactiveController = require('./controllers/inactive');
 var NewController = require('./controllers/new');
+var AboutController = require('./controllers/about');
 
 
 var app = express();
@@ -40,7 +41,7 @@ var hbs = exphbs.create({
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('port', process.env.PORT || 1000);
+app.set('port', process.env.PORT || 3000);
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -55,6 +56,7 @@ app.get('/', HomeController.index);
 app.get('/active', ActiveController.active);
 app.get('/inactive', InactiveController.inactive);
 app.get('/new', NewController.newusers);
+app.get('/about', AboutController.about);
 
 
 // Production error handler
